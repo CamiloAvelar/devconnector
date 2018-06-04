@@ -74,6 +74,7 @@ class CreateProfile extends Component {
         githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
+        instagram: profile.instagram,
         facebook: profile.facebook,
         linkedin: profile.linkedin,
         youtube: profile.youtube
