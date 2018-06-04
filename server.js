@@ -1,6 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
+process.env.NODE_ENV = 'development';
+
 const passport = require('passport');
 
 const users = require('./routes/api/users');
@@ -36,3 +39,4 @@ app.use('/api/posts', posts);
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+console.log(`Environment: ${process.env.NODE_ENV}`);
