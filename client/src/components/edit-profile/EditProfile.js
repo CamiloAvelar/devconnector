@@ -40,11 +40,11 @@ class CreateProfile extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors});
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
     }
 
-    if(nextProps.profile.profile){
+    if (nextProps.profile.profile) {
       const profile = nextProps.profile.profile;
 
       //Bring skills array back to CSV ( Comma sepparated value)
@@ -105,7 +105,7 @@ class CreateProfile extends Component {
   };
 
   onChange(e) {
-    this.setState({[e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
@@ -113,7 +113,7 @@ class CreateProfile extends Component {
 
     let socialInputs;
 
-    if(displaySocialInputs) {
+    if (displaySocialInputs) {
       socialInputs = (
         <div>
           <InputGroup
@@ -167,17 +167,17 @@ class CreateProfile extends Component {
     //Select options for status
     const options = [
       { label: '* Select Professional Status', value: 0 },
-      { label: 'Developer', value: 'Developer'},
-      { label: 'Junior Developer', value: 'Junior Developer'},
-      { label: 'Senior Developer', value: 'Senior Developer'},
-      { label: 'Manager', value: 'Manager'},
-      { label: 'Student or Learning', value: 'Student or Learning'},
-      { label: 'Insructor or Teacher', value: 'Insructor or Teacher'},
-      { label: 'Intern', value: 'Intern'},
-      { label: 'Other', value: 'Other'}
+      { label: 'Developer', value: 'Developer' },
+      { label: 'Junior Developer', value: 'Junior Developer' },
+      { label: 'Senior Developer', value: 'Senior Developer' },
+      { label: 'Manager', value: 'Manager' },
+      { label: 'Student or Learning', value: 'Student or Learning' },
+      { label: 'Insructor or Teacher', value: 'Insructor or Teacher' },
+      { label: 'Intern', value: 'Intern' },
+      { label: 'Other', value: 'Other' }
     ];
 
-    return(
+    return (
       <div className="create-profile">
         <div className="container">
           <div className="row">
@@ -252,14 +252,14 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.bio}
                   info="Tell us a little about yourself."
-                  />
+                />
 
                 <div className="mb-3">
                   <button type="button" onClick={() => {
-                      this.setState(prevState => ({
-                        displaySocialInputs: !prevState.displaySocialInputs
-                      }))
-                    }} className="btn btn-light">
+                    this.setState(prevState => ({
+                      displaySocialInputs: !prevState.displaySocialInputs
+                    }))
+                  }} className="btn btn-light">
                     Add Social Network Links
                   </button>
                   <span className="text-muted">Optional</span>
