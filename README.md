@@ -11,6 +11,8 @@ Projeto em andamento pelo curso da Udemy MERN Stack Front To Back: Full Stack. O
 * Login
 * Criar/editar perfil
 * Dashboard
+* Post feed
+* Comments and likes
 
 ### Instalação
 Rode o comando:
