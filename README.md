@@ -30,3 +30,5 @@ npm run dev
 
 ### Deploy:
 Atualmente o projeto já esta em production no [Heroku](https://guarded-ocean-12501.herokuapp.com/).
+
+#### Thanks to Brad Traversy
